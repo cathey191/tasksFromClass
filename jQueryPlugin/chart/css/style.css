@@ -1,9 +1,22 @@
-.container{
-	width: 1000px;
-	height: 1000px;
+*{
+	box-sizing: border-box;
+	font-family: sans-serif;
 }
 
-.bar{
-	width: 770px;
-	height: 385px;
+.container{
+	width: 45vw;
+	height: 1000px;
+	text-align: center;
+}
+
+.fLeft{
+	float: left;
+}
+
+.fRight{
+	float: right;
+}
+
+.clear{
+	clear: both;
 }
