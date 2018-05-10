@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style media="screen">
+		button{
+			border: 2px solid gray;
+		}
+	</style>
+</head>
+<body>
+	<button id="play">
+		Play
+	</button>
+
+	<button id="pause">
+		Pause
+	</button>
+
+	<script>
+
+	var audioObj = new Audio();
+	// console.dir(music);
+	audioObj.src = 'frigia.mp3';
+
+	function playAudio(){
+		audioObj.play();
+	}
+
+
+	audioObj.play();
+
+	var playButton = document.getElementById('play');
+	playButton.addEventListener('click', playAudio, false);
+
+
+	</script>
+</body>
+</html>
