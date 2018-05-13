@@ -21,18 +21,31 @@
 	<script>
 
 	var audioObj = new Audio();
-	// console.dir(music);
 	audioObj.src = 'frigia.mp3';
 
+	function init(){
+		var playButton = document.getElementById('play');
+		playButton.addEventListener('click', playAudio, false);
+
+		var pauseButton = document.getElementById('pause');
+		playButton.addEventListener('click', pauseAudio, false);
+	}
+
+	init();
+
 	function playAudio(){
-		audioObj.play();
+		if (audioObj.paused) {
+			audioObj.play()
+		} else {
+			audioObj.pause()
+		}
+	}
+
+	function pauseAudio(){
+
 	}
 
 
-	audioObj.play();
-
-	var playButton = document.getElementById('play');
-	playButton.addEventListener('click', playAudio, false);
 
 
 	</script>
