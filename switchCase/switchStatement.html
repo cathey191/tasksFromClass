@@ -14,7 +14,7 @@
 
 		<button onclick="myFunction()">Try it</button>
 
-		<p id="demo"></p>
+		<div id="demo"></div>
 
 
 
@@ -50,7 +50,7 @@
 
     	switch(fruits) {
         case "banana":
-            	text = "Banana is good!";
+          text = "Banana is good!";
         	break;
         case "orange":
         	text = "I am not a fan of orange.";
@@ -60,10 +60,10 @@
         	break;
         default:
         	text = "I have never heard of that fruit...";
+					fruits = "missingno"
     	}
-    	document.getElementById("demo").innerHTML = '<img src="fruit/'+fruits+'.jpg" alt="fruit image">';
+    	document.getElementById("demo").innerHTML = '<p>'+text+'</p><img style="height:250px" src="'+fruits+'.jpg" >';
 		}
-
 
 	</script>
 
