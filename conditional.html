@@ -29,13 +29,15 @@
 		</style>
 </head>
 
-
+<!-- BootStrap -->
 <div class="row">
 	<div class="input-group col-md-8">
 	  <input type="text" placeholder="Numbers here..." id="numbers">
 	  <button type="button" class="btn btn-success">TEST</button>
 	</div>
 </div>
+<!-- No more BootStrap -->
+
 
 <div class="main">
 	<div class="section">
@@ -70,7 +72,7 @@
 
 		function testFalsy (val) {
 			val = val.toString();
-			para = document.getElementById('string');
+			para = document.querySelector('#string');
 
 			if (val === '22') {
 				para.innerText = 'correct'
@@ -91,12 +93,13 @@
 			}
 		}
 
+
 		function doubleEquals (val) {
 			string = val.toString();
 			number = parseInt(val);
 			para = document.getElementById('double');
 
-			if ((string == number) && (number == 22)) {
+			if ((string == number) && (number === 22 || string === '22')) {
 				para.innerText = 'correct'
 			} else {
 				para.innerText = 'fail'
