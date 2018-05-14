@@ -18,20 +18,40 @@
 				width: 60%;
 				margin-bottom: 2em;
 			}
+			.main{
+				padding: 4em;
+				display: flex;
+			}
+			.section{
+				padding-left: 2em;
+				text-align: center;
+			}
 		</style>
 </head>
 
-<!-- Bootstrap input  -->
+
 <div class="row">
 	<div class="input-group col-md-8">
 	  <input type="text" placeholder="Numbers here..." id="numbers">
-	  <!-- Indicates a successful or positive action -->
 	  <button type="button" class="btn btn-success">TEST</button>
 	</div>
 </div>
 
+<div class="main">
+	<div class="section">
+		<h3>String</h3>
+		<p id="string"></p>
+	</div>
+	<div class="section">
+		<h3>Number</h3>
+		<p id="number"></p>
+	</div>
+	<div class="section">
+		<h3>Double Equals</h3>
+		<p id="double"></p>
+	</div>
+</div>
 
-<!-- Bootstrap input ends -->
 
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -44,25 +64,42 @@
 		$('button').click(function(){
 			testFalsy(input.value);
 			turnStringToNumber(input.value);
+			doubleEquals(input.value);
 		});
 
 
 		function testFalsy (val) {
 			val = val.toString();
+			para = document.getElementById('string');
 
 			if (val === '22') {
-				console.log('works');
+				para.innerText = 'correct'
+			} else {
+				para.innerText = 'fail'
 			}
 		}
 
 
 		function turnStringToNumber (val) {
 			val = parseInt(val);
+			para = document.getElementById('number');
 
-			if (val === 22) {
-				console.log('working now');
+			if (!(val === 22)) {
+				para.innerText = 'fail'
 			} else {
-				console.log('not working');
+				para.innerText = 'correct'
+			}
+		}
+
+		function doubleEquals (val) {
+			string = val.toString();
+			number = parseInt(val);
+			para = document.getElementById('double');
+
+			if ((string == number) && (number == 22)) {
+				para.innerText = 'correct'
+			} else {
+				para.innerText = 'fail'
 			}
 		}
 
