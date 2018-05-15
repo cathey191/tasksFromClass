@@ -30,6 +30,7 @@
 	<script>
 
 		(function(){
+			//Matching homework
 			var getAllP = document.querySelectorAll('P');
 			var questionP = getAllP[2];
 			var perant = questionP.parentNode;
@@ -53,6 +54,16 @@
 			styleChange(hide3, 'display', 'none');
 			styleChange(hide4, 'display', 'none');
 
+
+			// New work
+			function createElement(ref, what, text){
+				var header = document.querySelector(ref);
+				var p = document.createElement(what);
+
+				p.innerText = text;
+				header.before(p);
+			}
+			createElement('h4', 'p', 'this is new text, using JS')
 
 		})();
 	</script>
