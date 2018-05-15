@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		iframe {
+			display: none;
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+</head>
+<body>
+
+	<h1>Good Day</h1>
+	<ul id="listParent">
+		<li class="a-class">1</li>
+		<li class="a-class">2</li>
+		<li class="a-class">3</li>
+		<li class="a-class">4</li>
+		<li class="a-class">5</li>
+	</ul>
+
+	<p class="a-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, rem aut pariatur corporis, dolorum, libero autem deleniti porro magnam laborum accusamus et fugiat! Placeat quaerat nulla eos quas, quia libero.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quod, totam vel hic aperiam laborum minus non vitae rerum culpa, voluptas obcaecati alias itaque, impedit quis harum nobis ea nam.</p>
+	<p class="question">"How was Tuesday's lesson?"</p>
+	<iframe src="https://giphy.com/embed/Wg6sfwn9f0sJq" width="427" height="480" frameBorder="0" class="giphy-embed answer" allowFullScreen></iframe>
+	<h4 class="a-class"></h4>
+
+	<script>
+
+		(function(){
+			var getAllP = document.querySelectorAll('P');
+			var questionP = getAllP[2];
+			var perant = questionP.parentNode;
+			var iframe = perant.children[5];
+			var hide1 = perant.children[0];
+			var hide2 = perant.children[1];
+			var hide3 = perant.children[2];
+			var hide4 = perant.children[3];
+
+			function styleChange(element, prop, value){
+				element.style[prop] = value;
+			}
+
+			styleChange(questionP, 'fontSize', '88px');
+			styleChange(questionP, 'fontFamily', 'Satisfy');
+			styleChange(questionP, 'textAlign', 'center');
+			styleChange(iframe, 'display', 'block');
+			styleChange(iframe, 'margin', '0 auto');
+			styleChange(hide1, 'display', 'none');
+			styleChange(hide2, 'display', 'none');
+			styleChange(hide3, 'display', 'none');
+			styleChange(hide4, 'display', 'none');
+
+
+		})();
+	</script>
+</body>
+</html>
