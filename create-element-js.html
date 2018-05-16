@@ -9,6 +9,7 @@
 		<script>
 			(function(){
 
+				// creates element
 				function createElement (what, text){
 					var where = document.querySelector('script');
 					var element = document.createElement(what);
@@ -18,6 +19,7 @@
 					where.before(element);
 				};
 
+				// sets styles
 				function setStyle(what, prop, value){
 					var element = document.querySelector(what);
 					element.style[prop] = value;
@@ -27,9 +29,12 @@
 				createElement('p', 'I tried to find the rhythm of the world I used to live. I followed the current. I was silent, attentive, I made a conscious effort to smile, nod, stand, and perform the millions of gestures that constitute life on earth.');
 				// call second function to style p tag
 				setStyle('p', 'fontFamily', 'sans-serif');
-				setStyle('p', 'fontSize', '2em');
+				setStyle('p', 'fontSize', '1.5em');
+				setStyle('p', 'color', '#1e272e');
 				setStyle('p', 'border', '2px solid lightblue');
 				setStyle('p', 'borderRadius', '10px');
+				setStyle('p', 'padding', '10px');
+				setStyle('p', 'width', '550px');
 
 			})()
 		</script>
