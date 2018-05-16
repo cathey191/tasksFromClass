@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>create element js</title>
+	</head>
+	<body>
+
+		<script>
+			(function(){
+
+				function createElement (what, text){
+					var where = document.querySelector('script');
+					var element = document.createElement(what);
+					//adding text to the element
+					element.innerText = text;
+					//where the element is going to be placed
+					where.before(element);
+				};
+
+				function setAttribute(what, style){
+					var element = document.querySelector(what);
+					element.setAttribute('style', style);
+				};
+
+				// call first function to create p tag
+				createElement('p', 'I tried to find the rhythm of the world I used to live. I followed the current. I was silent, attentive, I made a conscious effort to smile, nod,e stan, and perform the millions of gestures that constitute life on earth.');
+				// call second function to style p tag
+				setAttribute('p', 'border: 1px solid lightblue;');
+
+			})()
+		</script>
+	</body>
+</html>
