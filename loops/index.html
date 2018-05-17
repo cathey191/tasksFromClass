@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Loops</title>
+		<style media="screen">
+			*{
+				font-family: sans-serif;
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				padding: 0.5em;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+
+
+		<script>
+			(function(){
+
+				var myArray = ['a', 'b', 'c', 'd', 'e', 'a', 'a', 'b', 'random', 50, 20, 50, 60, true, 'e', 'z', 'a'];
+				var listItems = document.querySelectorAll('li');
+
+
+				// for (var i = 0; i < myArray.length; i++) {
+				// 	myArray[i]
+				// 	console.log(i +1+ ' counter');
+				// }
+
+
+				// function loopTwo () {
+				// 	for (var i = 0; i < listItems.length; i++) {
+				// 		listItems[i].style.color = 'green';
+				// 	}
+				// };
+				// loopTwo();
+
+
+				// function loopThree () {
+				// 	for (var i = 0; i < 3; i++) {
+				// 		listItems[i].style.color = 'blue';
+				// 	}
+				// };
+				// loopThree();
+
+
+				//this will be helpful for the summative
+				var storageArray = [];
+				function usingArraysToStore () {
+
+					for (var i = 0; i < myArray.length; i++) {
+						if (myArray[i] == 'a') {
+							storageArray.push(myArray[i]);
+						}
+					}
+					alert('I count ' + storageArray.length + 'a\'s in total')
+
+				} // function ends
+				usingArraysToStore();
+
+
+			})();
+
+		</script>
+	</body>
+</html>
