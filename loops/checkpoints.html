@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Loop Checkpoints</title>
+		<style media="screen">
+			*{
+				font-family: sans-serif;
+			}
+			ul{
+				list-style: none;
+			}
+			.some-class{
+				font-size: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+		</ul>
+
+		<script>
+			(function() {
+				var list = document.querySelectorAll('li');
+
+
+				function colorChange (style, color) {
+					for (var i = 0; i < list.length; i++) {
+						list[i].style[style] = color;
+					}
+				}
+				colorChange('color', 'blue');
+				colorChange('textAlign', 'center');
+
+
+				function addClass (className) {
+					for (var i = 0; i < 4; i++) {
+						list[i].className = className;
+					}
+				}
+				addClass('some-class');
+
+
+				function editClass (thisClass, style, color) {
+					var editting = document.querySelectorAll(thisClass)
+					for (var i = 0; i < editting.length; i++) {
+						editting[i].style[style] = color;
+					}
+				}
+				editClass('.some-class', 'color', 'red');
+
+				function removeNumbers () {
+					var theArray = [11, 'a', 22, 'b', 55, 'c', 84, 'd', 101, 'something'];
+					for (var i = 0; i < theArray.length; i++) {
+						// console.log(typeof theArray[i]);
+						if (theArray[i] == number) {
+							console.log('pass');
+
+						} else {
+							console.log('fail');
+						}
+					}
+				}
+				removeNumbers();
+
+			}());
+
+		</script>
+	</body>
+</html>
