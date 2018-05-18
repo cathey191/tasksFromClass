@@ -29,6 +29,7 @@
 		<script>
 			(function() {
 				var list = document.querySelectorAll('li');
+				var ulTag = document.querySelector('ul');
 
 
 				function colorChange (style, color) {
@@ -48,25 +49,25 @@
 				addClass('some-class');
 
 
-				function editClass (thisClass, style, color) {
-					var editting = document.querySelectorAll(thisClass)
-					for (var i = 0; i < editting.length; i++) {
-						editting[i].style[style] = color;
-					}
-				}
-				editClass('.some-class', 'color', 'red');
+				// function editClass (thisClass, style, color) {
+				// 	var editting = document.querySelectorAll(thisClass)
+				// 	for (var i = 0; i < editting.length; i++) {
+				// 		editting[i].style[style] = color;
+				// 	}
+				// }
+				// editClass('.some-class', 'color', 'red');
 
 				function removeNumbers () {
 					var theArray = [11, 'a', 22, 'b', 55, 'c', 84, 'd', 101, 'something'];
+					var numberArray = [];
 					for (var i = 0; i < theArray.length; i++) {
-						// console.log(typeof theArray[i]);
-						if (theArray[i] == number) {
-							console.log('pass');
-
-						} else {
-							console.log('fail');
+						if (typeof theArray[i] == 'number') {
+							numberArray.push(theArray[i]);
 						}
 					}
+					var element = document.createElement('p');
+					element.innerText = numberArray.length;
+					ulTag.after(element);
 				}
 				removeNumbers();
 
