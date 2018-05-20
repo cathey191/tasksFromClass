@@ -33,14 +33,16 @@
 				var items = [];
 				var prices = [];
 
+
 				function cartItems (cart, value) {
 					for (var i = 0; i < cart.length; i++) {
-						value.push(shoppingCart[i].item);
+						value.push(cart[i].item);
 					}
 					value.sort();
 				}
 				cartItems(shoppingCart, items);
 				console.dir(items);
+				
 
 				function cartPrices (cart, value) {
 					for (var i = 0; i < cart.length; i++) {
@@ -53,17 +55,6 @@
 
 
 			}());
-
-
-
-			// // what is an argument - what is a parameter
-			//
-			// // When we set the function up we use parameters
-			// function demoArgParam (a, b) {
-			// 	var c = a + b;
-			// 	return c
-			// }
-			// demoArgParam(5, 22);
 
 		</script>
 	</body>
