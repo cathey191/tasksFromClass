@@ -10,6 +10,11 @@
 			ul{
 				list-style: none;
 			}
+			p{
+				font-size: 2em;
+				text-align: center;
+				color: purple;
+			}
 			.some-class{
 				font-size: 2em;
 			}
@@ -32,6 +37,7 @@
 				var ulTag = document.querySelector('ul');
 
 
+				// First Checkpoint
 				function colorChange (style, color) {
 					for (var i = 0; i < list.length; i++) {
 						list[i].style[style] = color;
@@ -41,6 +47,7 @@
 				colorChange('textAlign', 'center');
 
 
+				// Second Checkpoint
 				function addClass (className) {
 					for (var i = 0; i < 4; i++) {
 						list[i].className = className;
@@ -49,27 +56,21 @@
 				addClass('some-class');
 
 
-				// function editClass (thisClass, style, color) {
-				// 	var editting = document.querySelectorAll(thisClass)
-				// 	for (var i = 0; i < editting.length; i++) {
-				// 		editting[i].style[style] = color;
-				// 	}
-				// }
-				// editClass('.some-class', 'color', 'red');
-
+				// Third Checkpoint
 				function removeNumbers () {
 					var theArray = [11, 'a', 22, 'b', 55, 'c', 84, 'd', 101, 'something'];
 					var numberArray = [];
-					for (var i = 0; i < theArray.length; i++) {
-						if (typeof theArray[i] == 'number') {
-							numberArray.push(theArray[i]);
+					for (var i = 0; i < theArray.length; i++) { // looping through theArray
+						if (typeof theArray[i] === 'number') { // if theArray has a typeof number
+							numberArray.push(theArray[i]); // then push number to array
 						}
 					}
-					var element = document.createElement('p');
-					element.innerText = numberArray.length;
-					ulTag.after(element);
+					var element = document.createElement('p'); // creating new p element
+					element.innerText = numberArray.length; // creating text within p element
+					ulTag.after(element); // where the element is to be created
 				}
 				removeNumbers();
+
 
 			}());
 
