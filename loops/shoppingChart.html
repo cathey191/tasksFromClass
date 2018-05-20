@@ -33,27 +33,37 @@
 				var items = [];
 				var prices = [];
 
-				function cartItems () {
-					for (var i = 0; i < shoppingCart.length; i++) {
-						items.push(shoppingCart[i].item);
+				function cartItems (cart, value) {
+					for (var i = 0; i < cart.length; i++) {
+						value.push(shoppingCart[i].item);
 					}
-					items.sort();
+					value.sort();
 				}
-				cartItems();
-				// console.dir(items);
+				cartItems(shoppingCart, items);
+				console.dir(items);
 
-				function cartPrices () {
-					for (var i = 0; i < shoppingCart.length; i++) {
-						prices.push(shoppingCart[i].price);
+				function cartPrices (cart, value) {
+					for (var i = 0; i < cart.length; i++) {
+						value.push(cart[i].price);
 					}
-					prices.sort(function(a, b){return a - b});
+					value.sort(function(a, b){return a - b});
 				}
-				cartPrices();
+				cartPrices(shoppingCart, prices);
 				console.dir(prices);
 
 
 			}());
 
+
+
+			// // what is an argument - what is a parameter
+			//
+			// // When we set the function up we use parameters
+			// function demoArgParam (a, b) {
+			// 	var c = a + b;
+			// 	return c
+			// }
+			// demoArgParam(5, 22);
 
 		</script>
 	</body>
