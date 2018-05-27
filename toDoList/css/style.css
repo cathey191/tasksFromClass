@@ -1,0 +1,53 @@
+body{
+	background-color: #1e272e;
+	color: #1e272e;
+	font-family: Schoolbell;
+}
+h1{
+	font-family: Indie Flower;
+}
+
+.container{
+	height: 100vh;
+	background-color: #f6e58d;
+	text-align: center;
+}
+
+.input-group-text, .btn-outline-secondary{
+	background-color: transparent;
+	border: none;
+}
+
+.form-control{
+	margin-left: 0.25em;
+	border: none;
+	border-left: solid 1px #b33939;
+	border-radius: 0px;
+	text-align: left;
+}
+
+.tick, .play{
+	border-right: solid 1px #b33939;
+	border-radius: 0px;
+}
+
+.borderBottom{
+	border-bottom: solid 1px #40739e;
+}
+
+.checkWidth{
+	width: 41px;
+}
+
+.transparent{
+	background-color: transparent;
+}
+
+.remove{
+	border-radius: 0px;
+}
+
+/* tick color */
+/* .fa-check{
+	color: #b33939;
+} */
