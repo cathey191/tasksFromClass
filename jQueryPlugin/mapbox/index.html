@@ -14,18 +14,32 @@
 	<body>
 
 		<div id='map'></div>
-		<script>
-			mapboxgl.accessToken = 'pk.eyJ1IjoiY2F0aGV5MTkxIiwiYSI6ImNqaTNtb2o1ODAwNjgzcHF0ZWQxdmVtcTcifQ.BaXfgHPABUk6-kMMyyMNXQ';
-			var map = new mapboxgl.Map({
-    		container: 'map', // container id
-    		style: 'mapbox://styles/cathey191/cji3oxshg1lt72rkzkj9i7c0m',
-    		center: [174.78, -41.279], // starting position
-    		zoom: 12, // starting zoom
-			});
 
-			// Add zoom and rotation controls to the map.
-			map.addControl(new mapboxgl.NavigationControl());
-		</script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.js'></script>
+		<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
+		<script>
+mapboxgl.accessToken =
+	'pk.eyJ1IjoiY2F0aGV5MTkxIiwiYSI6ImNqaTNtb2o1ODAwNjgzcHF0ZWQxdmVtcTcifQ.BaXfgHPABUk6-kMMyyMNXQ';
+var map = new mapboxgl.Map({
+	container: 'map', // container id
+	style: 'mapbox://styles/cathey191/cji3oxshg1lt72rkzkj9i7c0m',
+	center: [174.78, -41.279], // starting position
+	zoom: 12 // starting zoom
+});
+
+var directions = new MapboxDirections({
+	accessToken:
+		'pk.eyJ1IjoiY2F0aGV5MTkxIiwiYSI6ImNqaTNtb2o1ODAwNjgzcHF0ZWQxdmVtcTcifQ.BaXfgHPABUk6-kMMyyMNXQ',
+	unit: 'metric',
+	profile: 'mapbox/driving'
+});
+
+map.addControl(directions, 'top-left');
+
+directions.on('route', function(directions) {
+	console.dir(directions.route[0].distance / 1000 + 'kms');
+});
+</script>
 
 	</body>
 </html>
